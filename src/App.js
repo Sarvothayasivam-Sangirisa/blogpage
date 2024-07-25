@@ -1,6 +1,6 @@
 import React from 'react';
 import { 
-  BrowserRouter as Router, 
+  HashRouter,
   Routes, 
   Route 
 } from "react-router-dom"; 
@@ -14,21 +14,21 @@ import Image from './Components/Image/JavaScrip.png';
 import Image2 from'./Components/Image/Data Structures.png';
 import Image3 from'./Components/Image/ComputerNetwork.jpeg';
 import Image4 from './Components/Image/algorithm.png';
-import '/home/sangirisha/Documents/blogone/src/App.css';
+import './App.css';
 function App() {
   return (
     <>
 
-<Router>
+<HashRouter>
       <BlogNav />
       <Routes> 
-        <Route path="/blogpage" element={<Posts />} /> 
+        <Route path="/" element={<Posts />} /> 
         <Route path="post1" element={<Post1 />} /> 
         <Route path="/post2" element={<Post2 />} />
         <Route path="/post3" element={<Post3 />} /> 
         <Route path="/post4" element={<Post4 />} /> 
       </Routes>
-    </Router>
+    </HashRouter>
     </>
   );
 }
